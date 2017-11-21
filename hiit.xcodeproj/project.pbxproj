@@ -22,6 +22,7 @@
 		3D042CE91FB851E1007CFE57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D042CE81FB851E1007CFE57 /* Assets.xcassets */; };
 		3D042CEE1FB851E2007CFE57 /* watch_test.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 3D042CD11FB851E1007CFE57 /* watch_test.app */; };
 		3D313FB71FC37C0600675092 /* SecondInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D313FB61FC37C0600675092 /* SecondInterfaceController.swift */; };
+		3D313FB91FC38C2800675092 /* HealthStoreSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D313FB81FC38C2800675092 /* HealthStoreSingleton.swift */; };
 		3D3B2A661FBAC94D00FEEC11 /* HealthKitSetupAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3B2A651FBAC94D00FEEC11 /* HealthKitSetupAssistant.swift */; };
 		3D932F701FBC2E800022F1C3 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D932F6F1FBC2E800022F1C3 /* HealthKit.framework */; };
 		3D932F741FBC2EA10022F1C3 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D932F731FBC2EA10022F1C3 /* HealthKit.framework */; };
@@ -91,6 +92,7 @@
 		3D042CEA1FB851E1007CFE57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D042CEB1FB851E1007CFE57 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		3D313FB61FC37C0600675092 /* SecondInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondInterfaceController.swift; sourceTree = "<group>"; };
+		3D313FB81FC38C2800675092 /* HealthStoreSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStoreSingleton.swift; sourceTree = "<group>"; };
 		3D3B2A611FBAC5B900FEEC11 /* watch_test Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "watch_test Extension.entitlements"; sourceTree = "<group>"; };
 		3D3B2A651FBAC94D00FEEC11 /* HealthKitSetupAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitSetupAssistant.swift; sourceTree = "<group>"; };
 		3D3B2A671FBAE4BA00FEEC11 /* test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = test.entitlements; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				3D042CEB1FB851E1007CFE57 /* PushNotificationPayload.apns */,
 				3D3B2A651FBAC94D00FEEC11 /* HealthKitSetupAssistant.swift */,
 				3D313FB61FC37C0600675092 /* SecondInterfaceController.swift */,
+				3D313FB81FC38C2800675092 /* HealthStoreSingleton.swift */,
 			);
 			path = "hiit_watch Extension";
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				3D042CE51FB851E1007CFE57 /* ExtensionDelegate.swift in Sources */,
 				3DE653C61FBBE0F30040EF61 /* HeartRate.swift in Sources */,
 				3D042CE31FB851E1007CFE57 /* InterfaceController.swift in Sources */,
+				3D313FB91FC38C2800675092 /* HealthStoreSingleton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

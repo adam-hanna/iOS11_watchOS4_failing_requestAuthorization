@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "hiit_watch Extension/InterfaceController.swift"
+            timestampString = "532928013.554635"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "InterfaceController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "watch_test_Extension.InterfaceController.__deallocating_deinit"
+                  moduleName = "watch_test Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamhanna/Desktop/apps/watch_test_3/test/hiit_watch%20Extension/InterfaceController.swift"
+                  timestampString = "532907335.338463"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "watch_test_Extension.InterfaceController.__allocating_init() -&gt; watch_test_Extension.InterfaceController"
+                  moduleName = "watch_test Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamhanna/Desktop/apps/watch_test_3/test/hiit_watch%20Extension/InterfaceController.swift"
+                  timestampString = "532907335.345612"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "3">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "watch_test_Extension.InterfaceController.init() -&gt; watch_test_Extension.InterfaceController"
+                  moduleName = "watch_test Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamhanna/Desktop/apps/watch_test_3/test/hiit_watch%20Extension/InterfaceController.swift"
+                  timestampString = "532907335.351321"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "34">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

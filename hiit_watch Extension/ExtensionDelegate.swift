@@ -7,11 +7,17 @@
 //
 
 import WatchKit
+import HealthKit
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
+    private var numAuthTries = 0
+    private let maxAuthTries = 5
 
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
+        // request healthkit auth and start workout session
+        HealthKitSetupAssistant.authorizeHealthKit(completion: self.authorizeHealthkitCB)
+        
     }
 
     func applicationDidBecomeActive() {
@@ -60,6 +66,62 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
                     // Fallback on earlier versions
                 }
             }
+        }
+    }
+    
+    private func authorizeHealthkitCB(authorized: Bool, error: Error?) -> Void {
+        print("Authorized: \(authorized).")
+        print("Error: \(String(describing: error)).")
+    
+        guard authorized else {
+    
+            let baseMessage = "HealthKit Authorization Failed"
+        
+            if let error = error {
+                print("\(baseMessage). Reason: \(error.localizedDescription)")
+            } else {
+                print(baseMessage)
+            }
+            
+            self.numAuthTries += 1
+            print("numAuthTries: \(numAuthTries)")
+            if self.numAuthTries <= self.maxAuthTries {
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                    // Put your code which should be executed with a delay here
+                    HealthKitSetupAssistant.authorizeHealthKit(completion: self.authorizeHealthkitCB)
+                })
+            } else {
+                // note @adam-hanna: how to display an error to the user?
+                //                let defaultAction = WKAlertAction(
+                //                    title: "Ok",
+                //                    style: WKAlertActionStyle.default) { () -> Void in
+                //                        print("Default")
+                //                }
+                //                self.presentAlert(
+                //                    withTitle: "Error",
+                //                    message: "Healthkit not authorized",
+                //                    preferredStyle: WKAlertControllerStyle.alert,
+                //                    actions: [defaultAction]
+                //                )
+            }
+    
+            return
+        }
+    
+        print("HealthKit Successfully Authorized.")
+    
+        // note @adam-hanna: check HKHealthStore.isHealthDataAvailable()?
+        let configuration = HKWorkoutConfiguration()
+        configuration.activityType = .highIntensityIntervalTraining
+        configuration.locationType = .indoor
+    
+        do {
+            let session = try HKWorkoutSession(configuration: configuration)
+            SharedHealthStoreSingleton.start(workoutSession: session)
+        }
+        catch let error as NSError {
+            // Perform proper error handling here...
+            fatalError("*** Unable to create the workout session: \(error.localizedDescription) ***")
         }
     }
 

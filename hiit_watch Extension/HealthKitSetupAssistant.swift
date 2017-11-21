@@ -42,9 +42,6 @@ class HealthKitSetupAssistant {
         ]
         
         // 4. Request Authorization
-        HKHealthStore().requestAuthorization(
-            toShare: healthKitTypesToWrite,
-            read: healthKitTypesToRead
-        ) { (success, error) in completion(success, error) }
+        SharedHealthStoreSingleton.requestAuthorization(toShare: healthKitTypesToWrite, read: healthKitTypesToRead, completion: completion)
     }
 }

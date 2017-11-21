@@ -14,11 +14,11 @@ import HealthKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let healthStore = HKHealthStore()
+    // let healthStore = HKHealthStore()
 
     // authorization from watch
     func applicationShouldRequestHealthAuthorization(_ application: UIApplication) {
-        self.healthStore.handleAuthorizationForExtension { success, error in
+        HKHealthStore().handleAuthorizationForExtension { success, error in
             print("Success: \(success).")
             print("Error: \(String(describing: error)).")
         }

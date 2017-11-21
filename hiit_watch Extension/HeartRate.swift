@@ -25,7 +25,7 @@ struct Zone {
         switch rate {
         case _ where rate < 65.21:
             L = .WarmUp
-            Color = UIColor(red: 4/255, green: 104/255, blue: 76/255, alpha: 1.0)
+            Color = UIColor(red: 4/255, green: 104/255, blue: 200/255, alpha: 1.0)
         case _ where rate < 78.25:
             L = .AerobicLight
             Color = UIColor(red: 3/255, green: 163/255, blue: 91/255, alpha: 1.0)
